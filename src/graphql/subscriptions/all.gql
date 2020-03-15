@@ -1,0 +1,8 @@
+subscription getAllFlats ($offset:Int!){
+  flats(order_by: {id: asc}, limit: 10, offset: $offset) {
+    price
+    title
+    square
+    id
+  }
+}

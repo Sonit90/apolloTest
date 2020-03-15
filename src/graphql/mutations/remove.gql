@@ -1,0 +1,9 @@
+mutation addFlat($id: Int!) {
+  delete_flats(where: {id: {_eq: $id}}) {
+    returning {
+      title
+      square
+      price
+    }
+  }
+}

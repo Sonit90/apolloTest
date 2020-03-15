@@ -1,0 +1,10 @@
+mutation updateFlat($id: Int!, $title: String!, $square: Int!, $price: Int!) {
+  update_flats(where: {id: {_eq: $id}}, _set: {price: $price, square: $square, title: $title}) {
+    returning {
+      id
+      price
+      square
+      title
+    }
+  }
+}

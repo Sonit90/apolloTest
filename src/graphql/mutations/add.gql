@@ -1,0 +1,10 @@
+mutation addFlat($title: String!, $square: Int!, $price:Int!) {
+  insert_flats(objects: {title: $title, square: $square, price: $price})
+  {
+    returning {
+      title
+      square
+      price
+    }
+  }
+}

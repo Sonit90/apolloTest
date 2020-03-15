@@ -1,0 +1,8 @@
+query allFlats{
+  flats{
+    id
+    title
+    price
+    square
+  }
+}
